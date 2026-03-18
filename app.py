@@ -117,7 +117,7 @@ with tab3:
     st.header("Inverse Design: Economic Feasibility")
     st.markdown("Mix different elements to create a new alloy and calculate its theoretical cost.")
     
-    element_col = df_prices.columns[0] 
+    element_col = 'element'
     
     col_a, col_b = st.columns(2)
     with col_a:
