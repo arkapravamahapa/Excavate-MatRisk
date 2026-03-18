@@ -13,15 +13,15 @@ st.title("🚀 Excavate: Material & Market Intelligence")
 @st.cache_data
 def load_datasets():
     # Cache_data is used for dataframes so they load instantly
-    df_m = pd.read_csv('data/cleaned_materials.csv')
-    df_f = pd.read_csv('data/merged_financials.csv')
-    df_p = pd.read_csv('data/DS5.csv')
+    df_m = pd.read_csv('Data/cleaned_materials.csv')
+    df_f = pd.read_csv('Data/merged_financials.csv')
+    df_p = pd.read_csv('Data/DS5.csv')
     return df_m, df_f, df_p
 
 @st.cache_resource
 def load_ml_model():
     # Cache_resource is used for AI models so they stay in memory
-    with open('data/task1_rf_model.pkl', 'rb') as f1:
+    with open('Data/task1_rf_model.pkl', 'rb') as f1:
         return pickle.load(f1)
 
 try:
